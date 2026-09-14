@@ -1,4 +1,4 @@
-# rsWeb - RetroShare Android WebUI Application
+# retroshare-web - RetroShare Android WebUI Application
 
 A lightweight, native Android application for running the **RetroShare C++ P2P Core** and **RSNewWebUI** directly on Android devices.
 
@@ -22,16 +22,16 @@ A lightweight, native Android application for running the **RetroShare C++ P2P C
 ## Project Structure
 
 ```
-rsWeb/
+retroshare-web/
 ├── app/
 │   ├── src/main/
-│   │   ├── java/org/retroshare/rsweb/
+│   │   ├── java/org/retroshare/retroshare-web/
 │   │   │   ├── MainActivity.kt        # Legacy service dashboard
 │   │   │   ├── WebUIActivity.kt       # Launcher, auth portal, and embedded WebUI
 │   │   │   ├── RetroShareService.kt   # Android Foreground Service for C++ core daemon
 │   │   │   └── LocalAssetServer.kt    # Embedded HTTP server for WebUI assets & proxy
 │   │   ├── assets/
-│   │   │   ├── rsweb/                 # Auth overlay styles and scripts
+│   │   │   ├── retroshare-web/                 # Auth overlay styles and scripts
 │   │   │   └── webui/                 # Compiled RSNewWebUI assets
 │   │   ├── res/                       # Layout XMLs, themes, colors, launcher icons
 │   │   └── AndroidManifest.xml
@@ -71,10 +71,10 @@ implementation("org.retroshare.service:libretroshare-MinApiLevel24-debug:46e3789
 
 ### 3. Open & Build in Android Studio
 1. Open **Android Studio**.
-2. Select **Open** and choose the `rsWeb` project folder.
+2. Select **Open** and choose the `retroshare-web` project folder.
 3. Click **Run 'app'** (or `Shift + F10`) to deploy to an Android device or emulator.
 
 ### 4. Running the App
-- Launching `rsWeb` opens `WebUIActivity`, requests notification permission when required, and starts the RetroShare foreground service.
+- Launching `retroshare-web` opens `WebUIActivity`, requests notification permission when required, and starts the RetroShare foreground service.
 - The embedded WebView first presents the authentication portal and then loads `RSNewWebUI`.
 - The RetroShare JSON API runs on `127.0.0.1:9092`; the local asset server runs on `127.0.0.1:9090`.
